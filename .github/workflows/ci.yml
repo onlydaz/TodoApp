@@ -1,0 +1,13 @@
+name: CI Check
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run script
+        run: echo "✅ Pull request received. CI is running..."
